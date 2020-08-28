@@ -13,9 +13,53 @@
 
 <body>
   {{!-- Navigation --}}
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Bullshit_generator</a>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Bullshit generator</a>
   </nav>
+
+  <h1 class="text-center my-4">你想對誰說幹話 ?</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="input-group col-4">
+        <div class="input-group-prepend d-flex flex-column">
+          <div class="avatar">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="工程師">
+          </div>
+          <div class="input-group-text d-flex justify-content-center">
+            <input type="radio" name="target" value="工程師" aria-label="Radio button for following text input">
+            <label for="" class="ml-1 mb-0">工程師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group col-4">
+        <div class="input-group-prepend d-flex flex-column">
+          <div class="avatar">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="創業家">
+          </div>
+          <div class="input-group-text d-flex justify-content-center">
+            <input type="radio" name="target" value="創業家" aria-label="Radio button for following text input">
+            <label for="" class="ml-1 mb-0">創業家</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group col-4">
+        <div class="input-group-prepend d-flex flex-column">
+          <div class="avatar">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="設計師">
+          </div>
+          <div class="input-group-text d-flex justify-content-center">
+            <input type="radio" name="target" value="設計師" aria-label="Radio button for following text input">
+            <label for="" class="ml-1 mb-0">設計師</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   {{!-- Partial template --}}
   {{{body}}}
