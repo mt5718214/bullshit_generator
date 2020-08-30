@@ -22,7 +22,7 @@
 
   <h1 class="text-center my-4">你想對誰說幹話 ?</h1>
 
-  <div class="container">
+  <form class="container mb-5" method="post" action="/generate">
     <div class="row">
       <div class="input-group col-4">
         <div class="input-group-prepend d-flex flex-column">
@@ -31,7 +31,8 @@
               class="card-img-top" alt="工程師">
           </div>
           <div class="input-group-text d-flex justify-content-center">
-            <input type="radio" name="target" value="工程師" aria-label="Radio button for following text input">
+            <input type="radio" name="target" value="engineer" aria-label="Radio button for following text input"
+              checked>
             <label for="" class="ml-1 mb-0">工程師</label>
           </div>
         </div>
@@ -44,7 +45,7 @@
               class="card-img-top" alt="創業家">
           </div>
           <div class="input-group-text d-flex justify-content-center">
-            <input type="radio" name="target" value="創業家" aria-label="Radio button for following text input">
+            <input type="radio" name="target" value="entrepreneur" aria-label="Radio button for following text input">
             <label for="" class="ml-1 mb-0">創業家</label>
           </div>
         </div>
@@ -57,18 +58,29 @@
               class="card-img-top" alt="設計師">
           </div>
           <div class="input-group-text d-flex justify-content-center">
-            <input type="radio" name="target" value="設計師" aria-label="Radio button for following text input">
+            <input type="radio" name="target" value="designer" aria-label="Radio button for following text input">
             <label for="" class="ml-1 mb-0">設計師</label>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="row mt-4">
+      <div class="button">
+        <input type="submit" class="btn btn-primary generateBtn mx-2" value="產生幹話">
+      </div>
+
+      <div class="show">
+        <div class="alert alert-secondary text-center" role="alert" style="width:75vw;height:12vh;">
+          {{!-- Partial template --}}
+          {{{body}}}
+        </div>
+      </div>
+    </div>
+  </form>
   </div>
 
 
-
-  {{!-- Partial template --}}
-  {{{body}}}
 
   {{!-- Bootstrap --}}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
